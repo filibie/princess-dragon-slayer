@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://8p1yvuc4go0h" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://owq1h7h6fucg" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://d0qrtpjcw0umw" path="res://scenes/platform.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://yfsd1w4reptb" path="res://scenes/coin.tscn" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -219,6 +220,7 @@ layer_0/tile_data = PackedInt32Array(-65537, 0, 0, -131072, 0, 0, 65533, 0, 0, 6
 [node name="Player" parent="." unique_id=381202934 instance=ExtResource("1_uwrxv")]
 z_index = 10
 position = Vector2(1, -44)
+collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=204205781]
 position = Vector2(0, -7)
@@ -234,3 +236,18 @@ position = Vector2(353, -28)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2" unique_id=1465456720]
 libraries/ = SubResource("AnimationLibrary_iywne")
 autoplay = &"move"
+
+[node name="Coin" parent="." unique_id=261245659 instance=ExtResource("4_lbhrr")]
+position = Vector2(38, -15)
+
+[node name="Coin2" parent="." unique_id=120615411 instance=ExtResource("4_lbhrr")]
+position = Vector2(201, -15)
+
+[node name="Coin3" parent="." unique_id=1078485056 instance=ExtResource("4_lbhrr")]
+position = Vector2(214, -15)
+
+[node name="Coin4" parent="." unique_id=305288966 instance=ExtResource("4_lbhrr")]
+position = Vector2(72, -124)
+
+[node name="Coin5" parent="." unique_id=1268557786 instance=ExtResource("4_lbhrr")]
+position = Vector2(487, -45)
