@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://yfsd1w4reptb" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cvwd5idvcbc86" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://btt2ow2m21lnc" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://r5s8y1l3sspg" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -261,13 +262,13 @@ position = Vector2(72, -124)
 position = Vector2(487, -45)
 
 [node name="Coin6" parent="Coins" unique_id=1006701195 instance=ExtResource("4_lbhrr")]
-position = Vector2(745, -110)
+position = Vector2(745, -105)
 
 [node name="Coin7" parent="Coins" unique_id=398142772 instance=ExtResource("4_lbhrr")]
-position = Vector2(760, -110)
+position = Vector2(760, -105)
 
 [node name="Coin8" parent="Coins" unique_id=466811190 instance=ExtResource("4_lbhrr")]
-position = Vector2(774, -110)
+position = Vector2(774, -105)
 
 [node name="Coin9" parent="Coins" unique_id=1596103487 instance=ExtResource("4_lbhrr")]
 position = Vector2(569, -186)
@@ -286,3 +287,35 @@ autoplay = &"move"
 
 [node name="Slime" parent="." unique_id=1561143120 instance=ExtResource("6_p57ef")]
 position = Vector2(520, 0)
+
+[node name="Labels" type="Node" parent="." unique_id=525936022]
+
+[node name="Label" type="Label" parent="Labels" unique_id=99039965]
+offset_left = -146.0
+offset_top = 3.0
+offset_right = -60.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.09453551, 0.21912897, 0.5079134, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump"
+
+[node name="Label2" type="Label" parent="Labels" unique_id=1629018615]
+offset_left = 353.0
+offset_top = 3.0
+offset_right = 449.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.09453551, 0.21912897, 0.5079134, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Falling hurts..."
+
+[node name="Label3" type="Label" parent="Labels" unique_id=1682535147]
+offset_left = 686.0
+offset_top = -132.0
+offset_right = 782.0
+offset_bottom = -121.0
+theme_override_colors/font_color = Color(0.09453551, 0.21912897, 0.5079134, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Almost there..."
