@@ -188,9 +188,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wqfne")
 }],
-"loop": true,
+"loop": false,
 "name": &"hit",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -242,9 +242,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t4otl")
 }],
-"loop": true,
+"loop": false,
 "name": &"roll",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -309,7 +309,7 @@ script = ExtResource("1_g2els")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1375317544]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
-animation = &"hit"
+animation = &"roll"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1974577286]
