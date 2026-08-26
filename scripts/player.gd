@@ -6,9 +6,10 @@ const SPEED = 130.0
 const ROLL_SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
-var double_jump_counter = 0
-var is_rolling = false
-var roll_direction = 1.0
+var double_jump_counter: int = 0
+var is_rolling: bool = false
+var roll_direction: int = 1.0
+var is_hit: bool = false
 
 func _ready() -> void:
 	animated_sprite.animation_finished.connect(_on_animation_finished)
@@ -17,6 +18,10 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+			
+	if is_hit:
+		move_and_slide()
+		return
 			
 	# Roll state
 	if is_rolling:
@@ -73,3 +78,11 @@ func start_roll() -> void:
 func _on_animation_finished() -> void:
 	if animated_sprite.animation == "roll":
 		is_rolling = false
+
+func take_hit(knockback_velocity: Vector2) -> void:
+	print("take_hit")
+	is_hit = true
+	velocity = knockback_velocity
+	animated_sprite.play("hit")
+	
+	get_tree().create_timer(0.4).timeout.connect(func(): is_hit = false)
