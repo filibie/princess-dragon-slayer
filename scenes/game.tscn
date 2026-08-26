@@ -245,7 +245,7 @@ layer_1/tile_data = PackedInt32Array(-65537, 0, 0, -131072, 0, 0, 65533, 0, 0, 6
 
 [node name="Player" parent="." unique_id=381202934 instance=ExtResource("1_uwrxv")]
 z_index = 10
-position = Vector2(1, -44)
+position = Vector2(470, -49)
 collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=204205781]
@@ -257,6 +257,7 @@ position_smoothing_enabled = true
 
 [node name="Killzone" parent="." unique_id=130906183 instance=ExtResource("5_iywne")]
 position = Vector2(19, 100)
+is_instant_kill = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1444605762]
 position = Vector2(0, 1)
@@ -309,6 +310,7 @@ position = Vector2(520, 0)
 [node name="Labels" type="Node" parent="." unique_id=525936022]
 
 [node name="Label" type="Label" parent="Labels" unique_id=99039965]
+visible = false
 offset_left = -146.0
 offset_top = 3.0
 offset_right = -60.0
@@ -319,6 +321,7 @@ theme_override_font_sizes/font_size = 8
 text = "Space to jump"
 
 [node name="Label2" type="Label" parent="Labels" unique_id=1629018615]
+visible = false
 offset_left = 353.0
 offset_top = 3.0
 offset_right = 449.0
