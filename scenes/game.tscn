@@ -245,7 +245,7 @@ layer_1/tile_data = PackedInt32Array(-65537, 0, 0, -131072, 0, 0, 65533, 0, 0, 6
 
 [node name="Player" parent="." unique_id=381202934 instance=ExtResource("1_uwrxv")]
 z_index = 10
-position = Vector2(470, -49)
+position = Vector2(-33, -28)
 collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=204205781]
